@@ -28,3 +28,18 @@ Maven expects:
 You can name your packages anything you like, as long as your runner class points correctly to:
 	• The location of the .feature files via features = "..."
 	• The location of the step definitions via glue = "..."
+
+
+your-maven-project/
+├── src/
+│   ├── main/
+│   │   └── java/                        # (If needed for application code)
+│   └── test/
+│       ├── java/
+│       │   ├── stepdefinitions/         # ✅ Step definitions go here
+│       │   │   └── LoginSteps.java
+│       │   └── runners/                 # ✅ TestNG Runner goes here
+│       │       └── TestNGRunner.java
+│       └── resources/
+│           └── features/                # ✅ Gherkin feature files go here
+│               └── login.feature
