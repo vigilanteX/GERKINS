@@ -1,4 +1,4 @@
-@Smoke
+@Smoke @F1
 Feature: This is feature1
 
   Scenario: Feature 1 scenario
