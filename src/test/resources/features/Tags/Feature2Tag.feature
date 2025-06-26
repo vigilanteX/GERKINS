@@ -1,3 +1,4 @@
+@Smoke2
 Feature: This is feature2
 
   Scenario: Feature 2 scenario
