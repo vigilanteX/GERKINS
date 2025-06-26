@@ -43,3 +43,20 @@ your-maven-project/
 │       └── resources/
 │           └── features/                # ✅ Gherkin feature files go here
 │               └── login.feature
+
+
+
+Glue Value                        | Allowed? | Notes
+---------------------------------|----------|------------------------------
+"stepdefinitions"                |   Yes    | Single package
+"com.example.steps"              |   Yes    | Fully qualified package
+"com.example.steps.LoginSteps"   |   No     | Class name → Not allowed
+{"steps", "hooks"}               |   Yes    | Multiple packages allowed
+
+
+
+Features Value                                   | Runs                               | Notes
+-------------------------------------------------|------------------------------------|--------------------------------------------
+"src/test/resources/features"                    | All .feature files in this folder  | Runs all feature files recursively
+"src/test/resources/features/login.feature"      |Only the login.feature file         | Runs a single specific feature file
+{ "file1.feature", "file2.feature" }             | Only those specified feature files | Runs multiple specified feature files
